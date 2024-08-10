@@ -19,6 +19,11 @@
         "body": "const (\n\t${1:name} = ${2:value}\n)",
         "description": "Snippet for a constant block"
     },
+    "constant op": {
+        "prefix": "op",
+        "body": "const op = \"${1:package.struct.func}\"\n",
+        "description": "Snippet for a op constant declaration"
+    },
     "type function declaration": {
         "prefix": "tyf",
         "body": "type ${1:name} func($3) $4",
