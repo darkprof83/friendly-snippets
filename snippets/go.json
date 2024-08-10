@@ -139,6 +139,11 @@
         "body": "fmt.Printf(\"$1\", ${2:var})",
         "description": "Snippet for fmt.Printf()"
     },
+    "fmt.Sprintf": {
+        "prefix": "fs",
+        "body": "fmt.Sprintf(\"$1\", ${2:var})",
+        "description": "Snippet for fmt.Sprintf()"
+    },
     "fmt.Errorf": {
         "prefix": "fe",
         "body": "fmt.Errorf(\"%s: %w\", op, err)",
