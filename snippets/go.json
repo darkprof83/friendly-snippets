@@ -19,6 +19,11 @@
         "body": "const (\n\t${1:name} = ${2:value}\n)",
         "description": "Snippet for a constant block"
     },
+    "constants with iota": {
+        "prefix": "coi",
+        "body": "const (\n\t${1:name 1} = iota\n\t${2:name 2}\n)",
+        "description": "Snippet for a constants with iota"
+    },
     "constant op": {
         "prefix": "op",
         "body": "const op = \"${1:package.struct.func}\"\n",
