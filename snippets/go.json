@@ -139,6 +139,11 @@
         "body": "fmt.Printf(\"$1\", ${2:var})",
         "description": "Snippet for fmt.Printf()"
     },
+    "fmt.Errorf": {
+        "prefix": "fe",
+        "body": "fmt.Errorf(\"%s: %w\", op, err)",
+        "description": "Snippet for fmt.Errorf()"
+    },
     "log.Println": {
         "prefix": "lp",
         "body": "log.Println(\"$1\")",
