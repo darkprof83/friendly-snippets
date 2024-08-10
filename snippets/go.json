@@ -234,6 +234,11 @@
         "body": "defer ${1:func}($0)",
         "description": "Snippet for defer statement"
     },
+    "defer recover": {
+        "prefix": "dfr",
+        "body": "defer func() {\n\tif err := recover().(error); err != nil {\n\t\t${1:visual}\n\t}\n}()",
+        "description": "Snippet for defer recover"
+    },
     "test function": {
         "prefix": "tf",
         "body": "func Test$1(t *testing.T) {\n\t$0\n}",
