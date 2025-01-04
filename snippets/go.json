@@ -261,7 +261,22 @@
     },
     "benchmark function": {
         "prefix": "bf",
-        "body": "func Benchmark$1(b *testing.B) {\n\tb.ReportAllocs()\n\n\tfor ${2:i} := 0; ${2:i} < b.N; ${2:i}++ {\n\t\t$0\n\t}\n}",
+        "body": [
+          "func Benchmark$1(b *testing.B) {",
+          "\tsizes := []int{10, 100, 1000}",
+          "",
+          "\tfor _, size := range sizes {",
+          "\t\tb.Run(strconv.Itoa(size), func(b *testing.B) {",
+          "\t\t\tb.ReportAllocs()",
+          "",
+          "\t\t\tb.ResetTimer()",
+          "\t\t\tfor ${2:i} := 0; ${2:i} < b.N; ${2:i}++ {",
+          "\t\t\t\t$0",
+          "\t\t\t}",
+          "\t\t})",
+          "\t}",
+          "}"
+        ],
         "description": "Snippet for Benchmark function"
     },
     "example function": {
